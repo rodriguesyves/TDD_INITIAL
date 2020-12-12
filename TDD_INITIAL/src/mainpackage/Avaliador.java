@@ -12,4 +12,8 @@ public class Avaliador {
 		}	
 		return maiorValor;	
 	}
+	
+	 public double menorLance(Leilao leilao) {
+			return 10;	
+		}
 }
