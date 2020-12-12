@@ -3,8 +3,13 @@ package mainpackage;
 
 public class Avaliador {
 	
-	 
+	private double maiorValor = Double.NEGATIVE_INFINITY;
+	
 	public double maiorLance(Leilao leilao) {
-		return 5;	
+		for(Lance lance : leilao.getLances() ) {
+			if (lance.getValor() > maiorValor)
+				maiorValor = lance.getValor();
+		}	
+		return maiorValor;	
 	}
 }
