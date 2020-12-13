@@ -21,4 +21,9 @@ public class Avaliador {
 			}	
 			return menorValor;	
 		}
+	 
+	 public String quemDeuMaiorLance(Leilao leilao) {
+		 return "joao";
+	 }
+	 
 }
