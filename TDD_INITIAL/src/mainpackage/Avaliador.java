@@ -23,7 +23,14 @@ public class Avaliador {
 		}
 	 
 	 public String quemDeuMaiorLance(Leilao leilao) {
-		 return "joao";
+		 String nomeUsuario = null;
+		 double maiorLance = maiorLance(leilao);
+		 for (Lance lance : leilao.getLances()) {
+			 if (lance.getValor() == maiorLance)
+				 nomeUsuario = lance.getUsuario().getNome();	 
+		 }
+		 
+		 return nomeUsuario;
 	 }
 	 
 }
