@@ -42,4 +42,16 @@ public class Testes {
 		Avaliador leiloeiro = new Avaliador();
 		assertEquals("Ana",leiloeiro.quemDeuMaiorLance(meuLeilao));
 	}
+	
+	@Test
+	public void testquemDeuMenorLance() {
+		Leilao meuLeilao = new Leilao("Artigos Eletrônicos");
+		meuLeilao.propoe(new Lance(new Usuario(1,"Ana"),5000));
+		meuLeilao.propoe(new Lance(new Usuario(1,"Emerson"),2300));
+		meuLeilao.propoe(new Lance(new Usuario(1,"Marcel"),2600));
+		meuLeilao.propoe(new Lance(new Usuario(1,"Murilo"),2120));
+		meuLeilao.propoe(new Lance(new Usuario(1,"Yves"),2700));
+		Avaliador leiloeiro = new Avaliador();
+		assertEquals("Murilo",leiloeiro.quemDeuMenorLance(meuLeilao));
+	}
 }

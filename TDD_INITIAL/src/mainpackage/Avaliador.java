@@ -33,4 +33,8 @@ public class Avaliador {
 		 return nomeUsuario;
 	 }
 	 
+	 public String quemDeuMenorLance(Leilao leilao) {
+		 return "jose";
+	 }
+	 
 }
