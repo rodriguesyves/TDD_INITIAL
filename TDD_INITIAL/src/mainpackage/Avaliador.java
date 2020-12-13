@@ -34,7 +34,14 @@ public class Avaliador {
 	 }
 	 
 	 public String quemDeuMenorLance(Leilao leilao) {
-		 return "jose";
+		 String nomeUsuario = null;
+		 double menorLance = menorLance(leilao);
+		 for (Lance lance : leilao.getLances()) {
+			 if (lance.getValor() == menorLance)
+				 nomeUsuario = lance.getUsuario().getNome();	 
+		 }
+		 
+		 return nomeUsuario;
 	 }
 	 
 }
